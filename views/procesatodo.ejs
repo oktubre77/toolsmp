@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>procesartodo</title>
+    
+    
+    <h2><%= respuesta %></h2>
+    <h3><%= FechaCreacion %></h3>
+    <h3><%= ID_Operacion %></h3>
+    <h3><%= Codigo_Autorizacion %></h3>
+    <h3><%= Status_detalle %></h3>
+    <h3><%= Monto %></h3>
+    <h3><%= Cod_Comercios %></h3>
+    <h3><%= Primeros6_Digitos %></h3>
+    <h3><%= Ultimo4_Digitos %></h3>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Top Mascots</h1>
+        <p><%= tagline %></p>
+        <ul>
+            <% response.data.forEach(function(repons) { %>
+                <li>
+                    <strong><%= repons.ID_Operacion %></strong>
+                    FechaCreacion <%= repons.FechaCreacion %>, Codigo_Autorizacion <%= repons.Codigo_Autorizacion %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    
+</body>
+</html>

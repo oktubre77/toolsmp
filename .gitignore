@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+# misc
+.DS_Store
+.env
+bootstrap*
+bootstrap.css
+bootstrap-responsive.css

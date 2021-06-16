@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,30 +7,33 @@
          <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <title>Herramienta MercadoPago</title>
         <style>
-        img{
-            width: 100%;
-        }
+                #loading {
+                        display: none;
+                    }
     </style>
     </head>
     <body>
         <div>
-        <h2> Herramienta API de MercadoPago</h2>
-            <div class="form-group">
+        <h2 class="text-primary">  Herramienta API de MercadoPago</h2>
+        <h2><%= titulo %></h2>
+             <div class="form-group">
                 <h3>Consulta ID MercadoPago</h3>
-                <form name= "forma" action=""  method="get" >
+                <form name= "forma"  method="POST" action="/procesar" >
                         <p>Ingresa Código: <input type="text" name="codigo" id ="cod" ></p>
+                        <input class="btn btn-primary" type="submit" value="getMP_ID">
                 </form>
-                <button class="btn btn-primary" onclick="mygetMP_ID()">getMP_ID</button>
+                
             </div>
             <div class="form-group1">
                 <h3>Consulta All_ID MercadoPago</h3>
-                <form name= "forma" action=""  method="get" >
+                <form name= "forma"  method="POST" action="/procesartodo">
                         <p> <label for="Ingrese Codigos">Ingrese Codigos:</label>
                             <textarea id="codigos" name="codigos" rows="5" cols="50">
                             </textarea>
                         </p>
+                        <input class="btn btn-primary" type="submit" value="getMP_AllID">
                 </form>
-                <button class="btn btn-primary" onclick="mygetMP_ALLID()">getMP_AllID</button>
+                
             </div>
            
             <div>
@@ -62,23 +65,8 @@
                 </form>
                 <button class="btn btn-primary" onclick="mygetByFechaMP()">getByFechaMP</button>
             </div>
-                      
-            
+           
         </div>
-        <h2> Resultado: </h2>
-        <div id="mensaje">
-        </div>
-       <!--  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>-->
-        <script src="/public/bundle.js" ></script>
-        
-        
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <!--<script src="/__/firebase/8.3.2/firebase-app.js"></script>-->
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-
-        <!-- Initialize Firebase -->
-        <!--<script src="/__/firebase/init.js"></script>-->
+                
     </body>
 </html>
